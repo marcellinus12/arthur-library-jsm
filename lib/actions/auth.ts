@@ -7,8 +7,8 @@ import { users } from "@/database/schema";
 import { hash } from "bcryptjs";
 import { eq } from "drizzle-orm";
 import { headers } from "next/headers";
-import ratelimit from "../ratelimit";
-import { workflowClient } from "../workflow";
+import ratelimit from "@/lib/ratelimit";
+import { workflowClient } from "@/lib/workflow";
 import config from "@/lib/config";
 
 export const signInWithCredentials = async (
