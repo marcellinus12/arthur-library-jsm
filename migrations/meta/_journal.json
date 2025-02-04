@@ -8,6 +8,20 @@
       "when": 1737256012726,
       "tag": "0000_stiff_starhawk",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1738559091719,
+      "tag": "0001_calm_hobgoblin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1738633507716,
+      "tag": "0002_exotic_shockwave",
+      "breakpoints": true
     }
   ]
 }
