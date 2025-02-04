@@ -1,13 +1,12 @@
 "use server";
 
-import { borrowRecords } from "./../../database/schema";
 import { db } from "@/database/drizzle";
-import { books } from "@/database/schema";
+import { books, borrowRecords } from "@/database/schema";
 import dayjs from "dayjs";
 import { eq } from "drizzle-orm";
 
 export const borrowBook = async (params: BorrowBookParams) => {
-  const { bookId, userId } = params;
+  const { userId, bookId } = params;
 
   try {
     const book = await db
@@ -25,7 +24,7 @@ export const borrowBook = async (params: BorrowBookParams) => {
 
     const dueDate = dayjs().add(7, "day").toDate().toDateString();
 
-    const record = db.insert(borrowRecords).values({
+    const record = await db.insert(borrowRecords).values({
       userId,
       bookId,
       dueDate,

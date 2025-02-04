@@ -48,7 +48,7 @@ const BorrowBook = ({
       } else {
         toast({
           title: "Error",
-          description: "An error occured while borrowing the book",
+          description: "An error occured while borrowing the book A",
           variant: "destructive",
         });
       }
